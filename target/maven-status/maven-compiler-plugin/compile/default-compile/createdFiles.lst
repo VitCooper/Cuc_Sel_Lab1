@@ -1,4 +1,3 @@
-Habrahabr\MainPageObject.class
-Habrahabr\PageObject.class
-search\GooglePageObject.class
-search\SearchResultPage.class
+page\SearchQueryPage.class
+utils\TestConf.class
+page\SearchResultPage.class

@@ -5,16 +5,12 @@ import Habrahabr.MainPageObject;
 //import io.cucumber.java.After;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-//import io.cucumber.java.Before;
+import io.cucumber.java.Before;
 //import io.cucumber.java.Scenario;
-//import io.cucumber.java.en.Given;
-//import io.cucumber.java.en.Then;
-//import io.cucumber.java.en.When;
-//import org.openqa.selenium.TakesScreenshot;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
@@ -50,10 +46,9 @@ public class FeedSteps {
     public void checkArticleCount(short articleCount){
         assertEquals(articleCount, mainPage.getArticleCount());
     }
-
     @After("@web")
     public void clear(Scenario scenario){
-        System.out.println(scenario.getStatus());
+        scenario.getStatus();
         if(scenario.isFailed()) {
             //TakesScreenshot takesScreenshot
             scenario.embed(mainPage.getScreenShot(), "image/png");

@@ -1,11 +1,12 @@
 package search;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class GooglePageObject {
@@ -45,18 +46,4 @@ public class GooglePageObject {
     public void tearDown() {
         driver.close();
     }
-
-    public byte[] getScreenShot() {
-        TakesScreenshot takesScreenshot = (TakesScreenshot)  driver;
-        return takesScreenshot.getScreenshotAs((OutputType.BYTES) );
-    }
-
-    public void getScreenshotAsFile() {
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
-
-        File file = takesScreenshot.getScreenshotAs((OutputType.FILE));
-        System.out.println(file.getPath());
-
-    }
-
 }

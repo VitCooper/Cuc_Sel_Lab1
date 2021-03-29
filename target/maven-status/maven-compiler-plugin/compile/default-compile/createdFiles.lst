@@ -1,0 +1,4 @@
+Habrahabr\MainPageObject.class
+Habrahabr\PageObject.class
+search\GooglePageObject.class
+search\SearchResultPage.class
